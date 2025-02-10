@@ -1,0 +1,62 @@
+body {
+    background-image: url("mp2.jpg"), url("mp1.jpg"), url("pp1.jpg"), url("pp2.jpg"), url("pp3.jpg"); /* Set multiple background images */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the images cover the full screen */
+    background-position: center; /* Center the images */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for birthday theme */
+}
+
+@keyframes laptopSlideshow {
+    0% { background-image: url("pp1.jpg"); }
+    25% { background-image: url("pp2.jpg"); }
+    50% { background-image: url("pp3.jpg"); }
+    75% { background-image: url("pp1.jpg"); }
+    100% { background-image: url("pp2.jpg"); }
+}
+
+@keyframes mobileSlideshow {
+    0% { background-image: url("mp1.jpg"); }
+    25% { background-image: url("mp2.jpg"); }
+    50% { background-image: url("mp3.jpg"); }
+    75% { background-image: url("mp1.jpg"); }
+    100% { background-image: url("mp2.jpg"); }
+}
+
+.countdown {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3); /* Increased transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffcc00; /* Birthday-themed border */
+}
+
+.countdown h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #ff69b4; /* Pink color for birthday */
+}
+
+.countdown p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.birthday-message {
+    font-size: 36px;
+    color: #ff4500; /* Orange color for birthday message */
+}
+
+/* Media query for laptop view */
+@media (min-width: 769px) {
+    body {
+        animation: laptopSlideshow 40s infinite; /* Add animation for laptop slideshow */
+    }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    body {
+        animation: mobileSlideshow 40s infinite; /* Add animation for mobile slideshow */
+    }
+}
