@@ -32,8 +32,8 @@ body {
 
 @keyframes mobileSlideshow {
     0% { background-image: url("mp1.jpg"); }
-    5% { background-image: url("mp2.jpg"); }
-    10% { background-image: url("mp3.jpg"); }
+    5% { background-image: url("mp3.jpg"); }
+    10% { background-image: url("mp2.jpg"); }
     15% { background-image: url("mp1.jpg"); }
     20% { background-image: url("mp2.jpg"); }
     25% { background-image: url("mp3.jpg"); }
