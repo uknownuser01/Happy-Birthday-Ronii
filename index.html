@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for birthday theme */
+            font-family: 'Comic Sans MS', sans-serif, arial; /* Fun font for birthday theme */
         }
         .countdown {
             text-align: center;
@@ -37,6 +37,19 @@
             color: #ff4500; /* Orange color for birthday message */
             margin-bottom: 20px;
         }
+        #actionButton {
+            display: none; /* Hidden by default */
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff69b4; /* Pink color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center; /* Center text */
+            width: 100%; /* Full width for centering */
+        }
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -46,11 +59,12 @@
     <h1 class="birthday-message">Happy Birthday Ronii..!</h1>
     <h1 id="timer">00:00:00</h1>
     <p id="message"></p>
+    <button id="actionButton" onclick="handleButtonClick()">Click Me! (If not opened)</button>
 </div>
 
 <script>
     // Set the date we're counting down to
-    const countDownDate = new Date("Feb 12, 2025 23:59:59").getTime();
+    const countDownDate = new Date("Feb 12, 2025 02:50:59").getTime();
 
     // Update the countdown every 1 second
     const x = setInterval(function() {
@@ -70,11 +84,16 @@
 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";
+            document.getElementById("timer").innerHTML = "🥳🥳🥳";
             document.getElementById("message").innerHTML = "Opening the file...";
-            window.open("#", "_blank"); // Change the URL to your file
+            document.getElementById("actionButton").style.display = "block"; // Show the button
+            window.open("https://uknownuser01.github.io/Happy-Bday-Roni/", "_main");
         }
     }, 1000);
+
+    function handleButtonClick() {
+        window.open("https://uknownuser01.github.io/Happy-Bday-Roni/", "_blank"); // Open the YouTube link
+    }
 </script>
 
 </body>
